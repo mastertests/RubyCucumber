@@ -2,9 +2,9 @@ require 'report_builder'
 
 ## Creating WebDriver
 # Init path to drivers
-Selenium::WebDriver::Firefox.driver_path = '../drivers/geckodriver.exe'
-Selenium::WebDriver::Chrome.driver_path = '../drivers/chromedriver.exe'
-Selenium::WebDriver::Edge.driver_path = '../drivers/MicrosoftWebDriver.exe'
+Selenium::WebDriver::Firefox.driver_path = File.join(File.absolute_path('../../..', File.dirname(__FILE__)), 'drivers', 'geckodriver.exe')
+Selenium::WebDriver::Chrome.driver_path = File.join(File.absolute_path('../../..', File.dirname(__FILE__)), 'drivers', 'chromedriver.exe')
+Selenium::WebDriver::Edge.driver_path = File.join(File.absolute_path('../../..', File.dirname(__FILE__)), 'drivers', 'MicrosoftWebDriver.exe')
 
 # File.expand_path('..', Dir.pwd)
 

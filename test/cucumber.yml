@@ -1,2 +1,0 @@
-
-default:  --color -r features --format html --out logs/html/report.html --format pretty BROWSER=edge FULLSCREEN=true

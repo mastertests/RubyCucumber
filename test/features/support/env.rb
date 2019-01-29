@@ -3,6 +3,7 @@ require 'selenium-webdriver'
 
 $main_page_url = 'https://github.com/'
 $browser = ENV['BROWSER']
+$fullscreen = ENV['FULLSCREEN']
 
 $big_duration = 5 # sec
 $small_duration = 2 # sec

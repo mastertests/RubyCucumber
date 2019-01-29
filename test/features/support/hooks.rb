@@ -17,7 +17,7 @@ Before do
               Selenium::WebDriver.for :edge
             end
   $driver.manage.delete_all_cookies
-  $driver.manage.window.maximize
+  $driver.manage.window.maximize if $fullscreen
 end
 
 # Reinit driver after each scenario

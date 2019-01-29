@@ -11,4 +11,8 @@ gem 'selenium-webdriver'
 
 gem 'cucumber-rails'
 
+gem 'pretty_face'
+
+gem 'syntax'
+
 gem 'report_builder', '~> 1.8'

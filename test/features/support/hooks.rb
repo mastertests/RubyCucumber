@@ -1,3 +1,5 @@
+require 'report_builder'
+
 ## Creating WebDriver
 # Init path to drivers
 Selenium::WebDriver::Firefox.driver_path = '../drivers/geckodriver.exe'
@@ -26,7 +28,15 @@ After '@feature' do
   sleep $small_duration
 end
 
-# # Close browser after all scenario if it didn't
 # at_exit do
 #   $driver.quit unless $driver.nil?
+#
+#   ReportBuilder.configure do |config|
+#     # config.input_path = 'logs/json'
+#     config.report_path = "logs/json"
+#     config.report_types = %i[retry html]
+#     config.report_title = 'Test Results'
+#   end
+#
+#   ReportBuilder.build_report
 # end

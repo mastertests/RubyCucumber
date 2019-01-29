@@ -15,18 +15,17 @@ class MainPage
     @browser.title
   end
 
-  def element_present?(element)
-    elt = eval("$#{element}")
-    elements = @browser.find_elements("#{elt[:type]}": elt[:locator])
-    !elements.empty? ? puts("Element '#{elements.first.object_id}' is present") : raise("Element '#{elements.first.text}' is absent")
-  end
-
   def navigate_to(menu_item_name)
     @browser.find_element(xpath: @menu_item.gsub('?', menu_item_name)).click
   end
 
-  def search_for(search_term)
+  def element_present?(element_name)
+    elt = eval("$#{element_name}")
+    elements = @browser.find_elements("#{elt[:type]}": elt[:locator])
+    !elements.empty? ? puts("Element '#{elements.first.object_id}' is present") : raise("Element '#{elements.first.text}' is absent")
+  end
 
+  def search_for(search_term)
     @element = @browser.find_element(xpath: @search_field)
     @element.click
     @element.send_keys(search_term, :enter)

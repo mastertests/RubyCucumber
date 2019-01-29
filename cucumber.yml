@@ -1,2 +1,0 @@
-
-default:  --color -r features --format html --out ./test/logs/html/report.html --format pretty BROWSER=chrome FULLSCREEN=true
